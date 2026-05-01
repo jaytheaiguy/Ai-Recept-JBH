@@ -1,0 +1,8 @@
+{
+  "name": "Fast Fair Offers AI",
+  "description": "AI-powered real estate lead prescreener for Jay Buys Houses / Fast Fair Home Offers.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": []
+}

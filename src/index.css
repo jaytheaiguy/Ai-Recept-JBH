@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #1e3a8a; /* Deep Blue/Indigo */
+  --color-brand-secondary: #dc2626; /* Professional Red for urgency/Iowa vibes */
+  --color-brand-accent: #fbbf24; /* Gold/Amber for "Real Solutions" */
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans;
+  }
+}

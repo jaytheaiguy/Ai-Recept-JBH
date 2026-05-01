@@ -1,0 +1,44 @@
+{
+  "entities": {
+    "Lead": {
+      "title": "Real Estate Lead",
+      "description": "A property owner interested in selling.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "phone": { "type": "string" },
+        "address": { "type": "string" },
+        "condition": { "type": "string" },
+        "askingPrice": { "type": "string" },
+        "timeline": { "type": "string" },
+        "qualificationScore": { "type": "number" },
+        "summary": { "type": "string" },
+        "transcript": { "type": "array", "items": { "type": "object" } },
+        "status": { "type": "string", "enum": ["new", "screened", "rejected", "investing"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "phone", "createdAt"]
+    },
+    "AppStats": {
+      "title": "Application Statistics",
+      "description": "Aggregated stats for the dashboard.",
+      "type": "object",
+      "properties": {
+        "totalLeads": { "type": "number" },
+        "hotLeads": { "type": "number" },
+        "totalCalls": { "type": "number" }
+      }
+    }
+  },
+  "firestore": {
+    "leads": {
+      "schema": "Lead",
+      "description": "Active leads waiting for review."
+    },
+    "stats": {
+      "schema": "AppStats",
+      "description": "Global application metrics."
+    }
+  }
+}
